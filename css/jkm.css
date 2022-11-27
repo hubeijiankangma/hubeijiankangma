@@ -1,0 +1,721 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #f6f6f6;
+}
+.menu{
+    width: 22vw;
+    height: 10.28vw;
+    float: left;
+    position: fixed;
+    z-index: 99;
+    margin-left: 78vw;
+
+}
+.menu .box{
+    width: 20.4vw;
+    height: 7.3vw;
+    background-color: white;
+    margin: 1.49vw 0 0 0;
+    border-radius:4vw 4vw 4vw 4vw;
+    -moz-border-radius:4vw 4vw 4vw 4vw;
+    filter:alpha(Opacity=80);
+    -moz-opacity:0.6;
+    opacity: 0.6;
+}
+.menu .box .box_list{
+    width: 10.2vw;
+    height: 7.3vw;
+    filter:alpha(Opacity=80);
+    -moz-opacity:0.6;
+    opacity: 0.6;
+    float: left;
+}
+
+.menu .box .menu_box{
+    border-radius:4vw 0 0 4vw;
+    -moz-border-radius:4vw 0 0 4vw;
+}
+.menu .box .close_box{
+    border-radius:0 4vw 4vw 0;
+    -moz-border-radius:0 4vw 4vw 0;
+}
+
+.menu .button_list{
+    height: 4.2vw;
+    width: 10.2vw;
+    position:absolute;
+}
+.menu .menu_button{
+    border-right: 0.1vw solid #8b8b8b;
+    margin: -5.7vw 0 0 0;
+    background: url("../img/jkm/menu.png") center no-repeat;
+    background-size: auto 4.2vw;
+}
+.menu .close_button{
+    margin: -5.7vw 0 0 10.2vw;
+    background: url("../img/jkm/close.png") center no-repeat;
+    background-size: auto 4.2vw;
+}
+
+.title{
+    background-color: #338eef;
+    height: 10.28vw;
+    width: 100%;
+    line-height: 10.28vw;
+    position:fixed;
+    z-index:1;
+}
+.title .back{
+    width: 22vw;
+    height: 100%;
+    float: left;
+}
+.title .back .back_button{
+    background-image: url("../img/jkm/backbutton.png");
+    background-size: 2.72vw 4.67vw;
+    width: 2.72vw;
+    height: 4.67vw;
+    margin: 2.8vw 0 0 2.8vw;
+}
+.title .title_text{
+    width: 56vw;
+    height: 100%;
+    float: left;
+}
+.title .title_text .title_text_info{
+    color: #ffffff;
+    text-align: center;
+    font-size: 4vw;
+}
+
+.name_info{
+    background-color: #338eef;
+    height: 39.72vw;
+    width: 100%;
+    color: #ffffff;
+}
+.name_info .name_title{
+    float: left;
+    width: 22.5vw;
+    margin-left: 5vw;
+    margin-top: 16.5vw;
+    font-size: 4.5vw;
+}
+.name_info .id_title{
+    float: left;
+    width: 70vw;
+    margin-top: 16.5vw;
+    font-size: 4.5vw;
+}
+.name_info .name_text{
+    float: left;
+    width: 22.5vw;
+    margin-left: 5vw;
+    margin-top: 2.3vw;
+    font-size: 5.1vw;
+}
+.name_info .id_text{
+    float: left;
+    width: 70vw;
+    margin-top: 2.3vw;
+    font-size: 5.1vw;
+}
+.qr_code{
+    background-image: url("../img/jkm/bj.gif");
+    background-size: 100% 92vw;
+    height: 92vw;
+    width: 100%;
+}
+.qr_code .qrcode_info{
+    width: 90vw;
+    height: 92vw;
+    margin-left: 5vw;
+    background: #ffffff;
+    border-radius:2vw 2vw 0 0;
+    -moz-border-radius:2vw 2vw 0 0;
+}
+.qr_code .qrcode_info .time{
+    width: 79vw;
+    height: 14.8vw;
+    margin-left: 5.5vw;
+    text-align: center;
+    font-weight:bold;
+}
+.qr_code .qrcode_info .time .time_date{
+    margin-top: 4.5vw;
+    display: inline-block;
+    vertical-align:middle;
+    font-size: 5.1vw;
+}
+.qr_code .qrcode_info .time .second{
+    margin-top: 4.3vw;
+    display: inline-block;
+    vertical-align:middle;
+    font-size: 6.1vw;
+    color: #318eef;
+}
+.qr_code .qrcode_info .qrcode_gold{
+    width: 58.8vw;
+    height: 58.8vw;
+    background: url("../img/jkm/goldborder.png");
+    background-size: 58.8vw 58.8vw;
+    margin-left: 15.6vw;
+    margin-bottom: 8.58vw;
+}
+
+.qr_code .qrcode_info .qrcode_gold .qrcode_img{
+    display: inline-block;
+    width: 53.28vw;
+    height: 53.28vw;
+    margin: 2.76vw 2.76vw 2.76vw 2.76vw;
+}
+
+.qr_code .qrcode_info .qrcode_gold .qrcode_logo{
+    position:absolute;
+    height: 13.1vw;
+    width: 10.52vw;
+    background: url("../img/jkm/elogo.png");
+    background-size: 10.52vw 13.1vw;
+    margin-left: 24.14vw;
+    margin-top: -37vw;
+}
+
+.qr_code .qrcode_info .qrcode_gold .vaccines_num{
+    position:absolute;
+    height: 5.14vw;
+    width: 58.8vw;
+    background: url("../img/jkm/vaccines_num.png");
+    background-size: 58.8vw 5.14vw;
+    margin-top: -3.3vw;
+    border-radius: 0 0 0.85vw 0.85vw;
+    -moz-border-radius: 0 0 0.85vw 0.85vw;
+    font-size: 3.4vw;
+    color: #7e5a1b;
+    text-align: center;
+    font-weight: 500;
+    line-height: 4.8vw;
+}
+
+
+.qr_code .qrcode_info .edit{
+    width: 30.8vw;
+    height: 4.2vw;
+    margin-left: 5.5vw;
+    float: left;
+}
+.qr_code .qrcode_info .manage{
+    width: 35vw;
+    height: 4.2vw;
+    float: left;
+}
+.qr_code .qrcode_info .operator{
+    width: 18.7vw;
+    height: 4.2vw;
+    float: left;
+}
+
+.qr_code .qrcode_info .manage img,
+.qr_code .qrcode_info .edit img,
+.qr_code .qrcode_info .operator img{
+    width: 4vw;
+    height: 4vw;
+    margin-top: 1vw;
+    position:absolute;
+}
+.qr_code .qrcode_info .manage span,
+.qr_code .qrcode_info .edit span,
+.qr_code .qrcode_info .operator span {
+    font-size: 4vw;
+    color: #1b81ff;
+    font-weight: 600;
+    margin-left: 5vw;
+}
+
+.info_list{
+    background-image: url("../img/jkm/bj2.png");
+    background-size: 100% 49vw;
+    height: 49vw;
+    width: 100%;
+}
+.info_list .trip_card{
+    width: 90vw;
+    height: 15.96vw;
+    margin-left: 5vw;
+    background: #ffffff;
+    border-radius: 0 0 2vw 2vw;
+    -moz-border-radius: 0 0 2vw 2vw;
+    margin-top: -0.07vw;
+}
+.info_list .trip_card .trip_button{
+    width: 80vw;
+    height: 15.96vw;
+    margin-left: 5vw;
+    border-top:  0.1vw solid #d9d9d9;
+}
+.info_list .trip_card .trip_button .trip_card_logo{
+    margin-top: 6vw;
+    margin-left: 0.5vw;
+    width: 8.17vw;
+    height: 4.13vw;
+    background-image: url("../img/jkm/tripcardlogo.png");
+    background-repeat: no-repeat;
+    background-size: 5.69vw 4.13vw;
+    float: left;
+}
+
+.info_list .trip_card .trip_button .find_my_card{
+    width: 67.6vw;
+    font-size: 4vw;
+    color: #000000;
+    font-weight: 600;
+    margin-top: 5vw;
+    float: left;
+}
+
+.info_list .trip_card .trip_button .trip_card_go{
+    width: 3.73vw;
+    height: 4.13vw;
+    margin-top: 6vw;
+    background-image: url("../img/jkm/tripcardgo.png");
+    background-repeat: no-repeat;
+    background-size: 3.19vw 4.13vw;
+    float: left;
+}
+
+.info_list .trip_card .nucleic{
+    width: 90vw;
+    height: 29.9vw;
+    margin-top: 3vw;
+}
+
+.info_list .trip_card .nucleic .nucleic_time{
+    width: 43.225vw;
+    height: 29.9vw;
+    background: url("../img/jkm/24hbj.png");
+    background-size: 43.225vw 29.9vw;
+    border-radius: 2vw 2vw 2vw 2vw;
+    -moz-border-radius: 2vw 2vw 2vw 2vw;
+    float: left;
+}
+.info_list .trip_card .nucleic .nucleic_time .nucleic_time_title,
+.info_list .trip_card .nucleic .vaccine .vaccine_title{
+    width: 43.225vw;
+    height: 10vw;
+}
+.info_list .trip_card .nucleic .nucleic_time .nucleic_time_title .tick{
+    width: 4.44vw;
+    height: 4.44vw;
+    margin-top: 5.5vw;
+    margin-left: 9.2vw;
+    background: url("../img/jkm/white_tick.png");
+    background-size: 4.44vw 4.44vw;
+    float: left;
+}
+.info_list .trip_card .nucleic .nucleic_time .nucleic_time_title .title_text{
+    float: left;
+    color: #ffffff;
+    margin-top: 5.2vw;
+    font-size: 3.5vw;
+    margin-left: 1vw;
+    font-weight:300;
+}
+.info_list .trip_card .nucleic .nucleic_time .nucleic_time_title .title_go{
+    width: 1.79vw;
+    height: 4.44vw;
+    margin-top: 5.5vw;
+    margin-left: 2.1vw;
+    background-image: url("../img/jkm/white_go.png");
+    background-repeat: no-repeat;
+    background-size: 1.79vw 4.44vw;
+    float: left;
+}
+.info_list .trip_card .nucleic .nucleic_time .nucleic_body{
+    color: #ffffff;
+    font-size: 5vw;
+    font-weight: 600;
+    margin-top: 1.8vw;
+    width: 43.225vw;
+    text-align: center;
+}
+.info_list .trip_card .nucleic .nucleic_time .tick_time{
+    color: #ffffff;
+    font-size: 3vw;
+    width: 43.225vw;
+    text-align: center;
+    margin-top: 1.8vw;
+}
+
+.info_list .trip_card .nucleic .vaccine{
+    width: 43.225vw;
+    height: 29.9vw;
+    margin-left: 3.55vw;
+    border-radius: 2vw 2vw 2vw 2vw;
+    -moz-border-radius: 2vw 2vw 2vw 2vw;
+    float: left;
+    #background: #ffffff;
+    background-image: url("../img/jkm/new_vaccine.png");
+    background-repeat: no-repeat;
+    background-size: 43.225vw 29.9vw;
+}
+.info_list .trip_card .nucleic .vaccine .vaccine_title .tick{
+    width: 4.44vw;
+    height: 4.44vw;
+    margin-top: 5.5vw;
+    margin-left: 9.2vw;
+    background: url("../img/jkm/blue_tick.png");
+    background-size: 4.44vw 4.44vw;
+    float: left;
+}
+.info_list .trip_card .nucleic .vaccine .vaccine_title .title_text{
+    float: left;
+    color: #000000;
+    margin-top: 5.2vw;
+    font-size: 3.5vw;
+    margin-left: 1vw;
+    font-weight:300;
+}
+.info_list .trip_card .nucleic .vaccine .vaccine_title .title_go{
+    width: 1.79vw;
+    height: 4.44vw;
+    margin-top: 5.5vw;
+    margin-left: 2.1vw;
+    background-image: url("../img/jkm/grey_go.png");
+    background-repeat: no-repeat;
+    background-size: 1.79vw 4.44vw;
+    float: left;
+}
+.info_list .trip_card .nucleic .vaccine .vaccine_number{
+    color: #4393f4;
+    font-size: 5vw;
+    font-weight: 600;
+    margin-top: 1.8vw;
+    width: 43.225vw;
+    text-align: center;
+}
+.info_list .trip_card .nucleic .vaccine .tick_time{
+    color: #000000;
+    font-size: 3vw;
+    width: 43.225vw;
+    text-align: center;
+    margin-top: 1.8vw;
+}
+.proving_tirp{
+    height: 15.89vw;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-top: 3vw;
+    background: #ffffff;
+    border-radius: 2vw 2vw 2vw 2vw;
+    -moz-border-radius: 2vw 2vw 2vw 2vw;
+
+}
+.proving_tirp .proving_title{
+    font-size: 4vw;
+    color: #000000;
+    font-weight: 600;
+    line-height: 15.89vw;
+    margin-left: 5vw;
+    width: 59.25vw;
+    float: left;
+}
+.proving_tirp .proving_button{
+    background: #4293f4;
+    width: 19.86vw;
+    height: 7.95vw;
+    float: left;
+    border-radius: 1.8vw 1.8vw 1.8vw 1.8vw;
+    -moz-border-radius: 1.8vw 1.8vw 1.8vw 1.8vw;
+    border:0.23vw solid #3f8ae8;
+    line-height: 7.95vw;
+    font-size: 3.3vw;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 3.96vw;
+    font-weight: 500;
+}
+
+.function_button{
+    width: 90vw;
+    min-height: 11.68vw;
+    background: #ffffff;
+    border-radius: 1.8vw 1.8vw 1.8vw 1.8vw;
+    -moz-border-radius: 1.8vw 1.8vw 1.8vw 1.8vw;
+    margin-top: 2.57vw;
+    margin-left: 5vw;
+}
+
+.function_button .parent{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: 11.68vw;
+    width: 90vw;
+    border-bottom: 0.23vw solid #dddddd;
+}
+.function_button .parent a{
+    width: 30vw;
+    height: 11.68vw;
+    -webkit-tap-highlight-color:rgba(255,0,0,0);
+}
+.function_button .parent .function_parent{
+    width: 30vw;
+    height: 11.68vw;
+    float: left;
+}
+.function_button .parent .function_parent div{
+    width: 17.8vw;
+    height: 11.68vw;
+    margin-left: 6.1vw;
+    margin-right: 6.1vw;
+    color: #505050;
+    line-height: 11.68vw;
+    text-align: center;
+    font-size: 4vw;
+    font-weight: 400;
+}
+
+.function_button .parent .function_parent .check{
+    height: 11.68vw;
+    color: #5791ec;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-bottom: 0.47vw solid #5791ec;
+}
+
+.function_button .button_list{
+    min-height: 10vw;
+    width: 90vw;
+    overflow:hidden
+}
+
+.function_button .button_list #function_list1{
+    width: 85.2vw;
+    margin-left: 2.11vw;
+}
+.function_button .button_list #function_list2{
+    width: 85.2vw;
+    margin-left: 1.65vw;
+}
+.function_button .button_list #function_list3{
+    width: 85.2vw;
+    margin-left: 1.17vw;
+}
+.function_button .button_list div .button_box{
+    width: 28.4vw;
+    min-height: 28.4vw;
+    float: left;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-bottom: 0.3vw solid #f6f6f6;
+    height: 32.7vw;
+}
+.function_button .button_list div .button_box:nth-child(3n-1){
+    border-left: 0.3vw solid #f6f6f6;
+    border-right: 0.3vw solid #f6f6f6;
+}
+
+.function_button .button_list div:nth-child(1) .button_box:nth-child(-n+3){
+    height: 37vw;
+}
+/*.function_button .button_list div:nth-child(1) .button_box:nth-child(n+4){*/
+/*    height: 32.7vw;*/
+/*}*/
+/*.function_button .button_list div:nth-child(n+2) .button_box{*/
+/*    height: 32.7vw;*/
+/*}*/
+
+
+
+.function_button .button_list .hide{
+    display:none;
+}
+
+.function_button .button_list div div img{
+    width: 12vw;
+    height: 12vw;
+    margin: 5vw 8.2vw 2.5vw 8.2vw;
+}
+.function_button .button_list div .button_box .button_name{
+    width: 24vw;
+    font-size: 4vw;
+    font-weight: 400;
+    text-align: center;
+    margin-left: 2.2vw;
+    margin-bottom: 3.2vw;
+    line-height: 4.3vw;
+}
+.function_button .button_list div .button_box:nth-child(3n-1) .button_name{
+    margin-left: 4.2vw;
+    width: 20vw;
+}
+
+
+.foot{
+    height: 36.14vw;
+    width: 100vw;
+    background-image: url("../img/jkm/foot.png");
+    background-size: 100vw 36.14vw;
+}
+
+.frame_1 .frame_1_mask{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+}
+.frame_1 .frame_1_box{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 3;
+}
+.frame_1 .frame_1_box .frame_1_box_mask{
+    width: 100vw;
+    height: 100vh;
+}
+.frame_1 .frame_1_box .frame_1_box_close{
+    width: 100vw;
+    height: 13vw;
+}
+.frame_1 .frame_1_box .app_name{
+    width: 100vw;
+    height: 10.28vw;
+}
+.frame_1 .frame_1_box .app_name .app_icon{
+    height: 10.28vw;
+    width: 7vw;
+    margin-left: 3.74vw;
+    float: left;
+}
+.frame_1 .frame_1_box .app_name .app_icon img{
+    width: 5.76vw;
+    height: 5.76vw;
+    margin-top: 2.26vw;
+}
+
+.frame_1 .frame_1_box .app_name .app_name_title{
+    height: 10.28vw;
+    width: 79.5vw;
+    float: left;
+    color: #e9edf2;
+}
+.frame_1 .frame_1_box .app_name .app_name_title .name_title{
+    height: 10.28vw;
+    width: 34.5vw;
+    line-height: 10.5vw;
+    font-size: 3.5vw;
+    font-weight: 600;
+    float: left;
+}
+.frame_1 .frame_1_box .app_name .app_name_title .app_go{
+    float: left;
+}
+.frame_1 .frame_1_box .app_name .app_name_title .app_go img{
+    width: 1.4vw;
+    height: 2.5vw;
+    margin-top: 3.9vw;
+}
+.frame_1 .frame_1_box .app_name .app_close{
+    height: 10.28vw;
+    float: left;
+}
+.frame_1 .frame_1_box .app_name .app_close img{
+    height: 6.54vw;
+    width: 6.54vw;
+    margin-top: 1.87vw;
+}
+.frame_1 .frame_1_box .browser .browser_title{
+    width: 100vw;
+    height: 10.28vw;
+    background: #f6f6f6;
+    border-radius: 3vw 3vw 0 0;
+    -moz-border-radius: 3vw 3vw 0 0;
+}
+
+.frame_1 .frame_1_box .browser .browser_title .browser_title_return{
+    width: 6.15vw;
+    height: 10.28vw;
+    float: left;
+}
+.frame_1 .frame_1_box .browser .browser_title .frame_1_return{
+    width: 2.18vw;
+    height: 4.05vw;
+    margin: 3.12vw 0 0 3.97vw;
+}
+.frame_1 .frame_1_box .browser .browser_title .browser_title_name{
+    width: 87.7vw;
+    height: 10.28vw;
+    float: left;
+    font-size: 3.9vw;
+    color: #000000;
+    font-weight: 600;
+    text-align: center;
+    line-height: 10.28vw;
+}
+
+.frame_1 .frame_1_box .browser .browser_iframe{
+    width: 100vw;
+    border: 0;
+    background: #ffffff;
+}
+
+.loading{
+    width: 31.78vw;
+    height: 31.78vw;
+    background: #4c4c4c;
+    position: fixed;
+    z-index: 99;
+    top: 50vh;
+    left: 50vw;
+    margin: -21.5vw 0 0 -15.89vw;
+    border-radius: 2.73vw 2.73vw 2.73vw 2.73vw;
+    -moz-border-radius: 2.73vw 2.73vw 2.73vw 2.73vw;
+}
+.loading .loading_img{
+    width: 31.78vw;
+    height: 15.97vw;
+}
+@-webkit-keyframes rotation{
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+.loading .loading_img img{
+    width: 9.5vw;
+    height: 9.5vw;
+    margin: 6.46vw 0 0 11.14vw;
+    -webkit-transform: rotate(360deg);
+    animation: rotation 1s linear infinite;
+    -moz-animation: rotation 1s linear infinite;
+    -webkit-animation: rotation 1s linear infinite;
+    -o-animation: rotation 1s linear infinite;
+}
+.loading .loading_name{
+    width: 31.78vw;
+    height: 13vw;
+    font-size: 3.9vw;
+    font-weight: 400;
+    color: #ededed;
+    text-align: center;
+    line-height: 13vw;
+}
+
+.advertise{
+    width: 100vw;
+    height: 14.72vw;
+    background-image: url("../img/xck/pass/advertise.png");
+    background-size: 100vw 14.72vw;
+    position: fixed;
+    bottom: 0;
+}
+
+
+
+

@@ -1,0 +1,14 @@
+{
+  "short_name": "湖北健康码",
+  "name": "湖北健康码",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ],
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone"
+}

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>湖北健康码</title>
+    <meta name="theme-color" content="#338eef">
+    <link rel="manifest" href="./manifest.json">
+    <script>navigator.serviceWorker.register('./js/sw.js', { scope: './' });</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/qrcode.min.js"></script>
+    <script type="text/javascript" src="./js/md5.min.js"></script>
+    <link rel="stylesheet" href="./css/jkm.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="box">
+            <div class="box_list menu_box"></div>
+            <div class="box_list close_box"></div>
+        </div>
+        <div class="button_list menu_button"></div>
+        <div class="button_list close_button"></div>
+    </div>
+    <div class="title">
+        <div class="back">
+            <div class="back_button"></div>
+        </div>
+        <div class="title_text">
+            <div class="title_text_info">湖北健康码</div>
+        </div>
+    </div>
+
+    <div class="name_info">
+        <div class="name_title">姓名</div>
+        <div class="id_title">身份证号</div>
+        <div class="name_text" name="id_name_last1"></div>
+        <div class="id_text" name="id_number_last4"></div>
+    </div>
+    <div class="qr_code">
+        <div class="qrcode_info">
+            <div class="time">
+                <div class="time_date"></div><div class="second"></div>
+                <script>
+                    function getQrcodeTime() {
+                        var time = new Date();
+                        var year = time.getFullYear();
+
+                        var month = time.getMonth() + 1;
+                        month = month<10 ? '0' + month:month;
+                        var date = time.getDate();
+                        date = date<10? '0'+date:date;
+                        var h = time.getHours();
+                        h = h < 10 ? '0' + h : h;
+                        var m = time.getMinutes();
+                        m = m < 10 ? '0' + m : m;
+                        var s = time.getSeconds();
+                        s = s < 10 ? '0' + s : s;
+                        document.getElementsByClassName("time_date")[0].innerText = year+"-"+month+"-"+date+" "+h+":"+m+":";
+                        document.getElementsByClassName("second")[0].innerText = s;
+                    }
+                    getQrcodeTime();
+                    setInterval(function () {
+                        getQrcodeTime();
+                    }, 1000);
+                </script>
+            </div>
+            <div class="qrcode_gold">
+                <div class="qrcode_img" id="qrcode_img_box"></div>
+                <script>
+                    var nowTime = new Date().getTime();
+                    var codeId = md5(nowTime);
+                    new QRCode(document.getElementById("qrcode_img_box"), {    // 显示二维码的元素或该元素的 ID
+                        text: "{\"codeId\":\""+codeId+"\",\"lastReportTime\":1647310341000,\"outTime\":4803502341000,\"zoning\":\"420100\",\"host\":\"app.rio.wuhan.gov.cn\",\"t\":166484,\"color\":\"green\",\"nowTime\":"+nowTime+"}",   // 内容可以是文字，链接，邮箱
+                        width: (window.innerWidth)*0.01*53.28,          //设置宽度
+                        height: (window.innerWidth)*0.01*53.28,        // 设置高度
+                        colorDark : "#00904f",        // 设置前景色
+                        colorLight : "#ffffff",        // 设置背景色
+                        correctLevel : QRCode.CorrectLevel.L       // 设置容错级别，上面有介绍
+                    });
+                </script>
+                <div class="qrcode_logo"></div>
+                <div class="vaccines_num">已接种2针新冠疫苗</div>
+            </div>
+            <div class="edit">
+                <img src="./img/jkm/edit.png" alt=""/>
+                <span>健康上报</span>
+            </div>
+            <div class="manage">
+                <img src="./img/jkm/manage.png" alt=""/>
+                <span>健康码管理</span>
+            </div>
+            <div class="operator">
+                <img src="./img/jkm/operator.png" alt=""/>
+                <span>客服</span>
+            </div>
+        </div>
+    </div>
+    <div class="info_list">
+        <div class="trip_card">
+            <div class="trip_button">
+                <div class="trip_card_logo"></div>
+                <div class="find_my_card">查询我的行程卡</div>
+                <div class="trip_card_go"></div>
+            </div>
+            <div class="nucleic">
+                <div class="nucleic_time">
+                    <div class="nucleic_time_title">
+                        <div class="tick"></div>
+                        <div class="title_text">核酸检测</div>
+                        <div class="title_go"></div>
+                    </div>
+                    <div class="nucleic_body">24小时阴性</div>
+                    <div class="tick_time"></div>
+                    <script>
+                        function getNucleicTime() {
+                            var time = new Date();
+                            var year = time.getFullYear();
+                            var month = time.getMonth() + 1;
+                            month = month<10 ? '0' + month:month;
+                            var date = time.getDate();
+                            date = date<10? '0'+date:date;
+                            var h = time.getHours();
+                            h = h < 10 ? '0' + h : h;
+                            var m = time.getMinutes();
+                            m = m < 10 ? '0' + m : m;
+                            var s = time.getSeconds();
+                            s = s < 10 ? '0' + s : s;
+
+                            if(Number(h.toString()+m.toString())>=2022){
+                                document.getElementsByClassName("tick_time")[0].innerText = year+"-"+month+"-"+date+" 20:22";
+                            }else{
+                                document.getElementsByClassName("tick_time")[0].innerText = getNextDate(year+"-"+month+"-"+date,-1)+" 20:22";
+                            }
+                        }
+                        function getNextDate(date, day) {
+                            var dd = new Date(date);
+                            dd.setDate(dd.getDate() + day);
+                            var y = dd.getFullYear();
+                            var m = dd.getMonth() + 1 < 10 ? "0" + (dd.getMonth() + 1) : dd.getMonth() + 1;
+                            var d = dd.getDate() < 10 ? "0" + dd.getDate() : dd.getDate();
+                            return y + "-" + m + "-" + d;
+                        }
+                        getNucleicTime();
+                    </script>
+                </div>
+                <div class="vaccine">
+                    <!--                    <div class="vaccine_title">-->
+                    <!--                        <div class="tick"></div>-->
+                    <!--                        <div class="title_text">疫苗接种</div>-->
+                    <!--                        <div class="title_go"></div>-->
+                    <!--                    </div>-->
+                    <!--                    <div class="vaccine_number">2次</div>-->
+                    <!--                    <div class="tick_time">2022-12-15</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="proving_tirp">
+        <div class="proving_title">通信行程卡</div>
+        <div class="proving_button">点击核验</div>
+    </div>
+    <div class="function_button">
+        <div class="parent">
+            <a href="javascript:function_check(1)">
+                <div class="function_parent">
+                    <div class="check" id="function_parent1">信息登记</div>
+                </div>
+            </a>
+            <a href="javascript:function_check(2)">
+                <div class="function_parent">
+                    <div class="" id="function_parent2">服务导航</div>
+                </div>
+            </a>
+            <a href="javascript:function_check(3)">
+                <div class="function_parent">
+                    <div class="" id="function_parent3">便捷查询</div>
+                </div>
+            </a>
+        </div>
+        <div class="button_list">
+            <div class="" id="function_list1">
+                <div class="button_box">
+                    <img src="./img/jkm/function_button/1-0.png" alt=""/>
+                    <div class="button_name">疫苗接种</div>
+                </div>
+                <div class="button_box">
+                    <img src="./img/jkm/function_button/1-1.png" alt=""/>
+                    <div class="button_name">外地来（返）汉人员信息申报</div>
+                </div>
+                <div class="button_box">
+                    <img src="./img/jkm/function_button/1-2.png" alt=""/>
+                    <div class="button_name">健康上报</div>
+                </div>
+                <div class="button_box">
+                    <img src="./img/jkm/function_button/1-3.png" alt=""/>
+                    <div class="button_name">抗原检测上报</div>
+                </div>
+                <div class="button_box">
+                    <img src="./img/jkm/function_button/1-4.png" alt=""/>
+                    <div class="button_name">居家健康监测</div>
+                </div>
+            </div>
+            <div class="hide"  id="function_list2">
+                <div class="button_box">
+                    <img src="./img/jkm/function_button/2-1.png" alt=""/>
+                    <div class="button_name">便利检地点查询</div>
+                </div>
+                <div class="button_box">
+                    <img src="./img/jkm/function_button/2-2.png" alt=""/>
+                    <div class="button_name">发热门诊导航</div>
+                </div>
+                <div class="button_box">
+                    <img src="./img/jkm/function_button/2-3.png" alt=""/>
+                    <div class="button_name">电子健康卡</div>
+                </div>
+            </div>
+            <div class="hide" id="function_list3">
+                <div class="button_box">
+                    <img src="./img/jkm/function_button/3-1.png" alt=""/>
+                    <div class="button_name">行程查询</div>
+                </div>
+                <div class="button_box">
+                    <img src="./img/jkm/function_button/3-2.png" alt=""/>
+                    <div class="button_name">同行密接人员自查</div>
+                </div>
+                <div class="button_box">
+                    <img src="./img/jkm/function_button/3-3.png" alt=""/>
+                    <div class="button_name">全国中高风险地区</div>
+                </div>
+                <div class="button_box">
+                    <img src="./img/jkm/function_button/3-4.png" alt=""/>
+                    <div class="button_name">各地防疫政策</div>
+                </div>
+                <div class="button_box">
+                    <img src="./img/jkm/function_button/3-5.png" alt=""/>
+                    <div class="button_name">全国疫情地图</div>
+                </div>
+                <div class="button_box">
+                    <img src="./img/jkm/function_button/3-6.png" alt=""/>
+                    <div class="button_name">肺炎相关求助热线</div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function function_check(id){
+                for (var a=1;a<=3;a++){
+                    document.getElementById('function_parent'+a).className = "";
+                    document.getElementById('function_list'+a).className = "hide";
+                }
+                document.getElementById('function_parent'+id).className = "check";
+                document.getElementById('function_list'+id).className = "";
+            }
+        </script>
+    </div>
+    <div class="foot"></div>
+    <div class="frame_1">
+        <div class="frame_1_mask" style="display:none"></div>
+        <div class="frame_1_box" style="display: none">
+            <div class="frame_1_box_mask"></div>
+            <div class="frame_1_box_close" onclick="hide_frame_1();"></div>
+            <div class="app_name">
+                <div class="app_icon">
+                    <img src="./img/jkm/app_icon.png" alt="">
+                </div>
+                <div class="app_name_title">
+                    <div class="name_title">通信行程卡 提供服务</div>
+                    <div class="app_go">
+                        <img src="./img/jkm/app_go.png" alt="">
+                    </div>
+                </div>
+                <div class="app_close">
+                    <img src="./img/jkm/app_close.png" alt="" onclick="hide_frame_1();">
+                </div>
+            </div>
+            <div class="browser">
+                <div class="browser_title">
+                    <div class="browser_title_return">
+                        <img class="frame_1_return" src="img/jkm/frame_1_return.png" alt="" style="display: none">
+                        <script>
+                            function show_frame_1_return(){
+                                $(".frame_1_return").fadeIn(150);
+                                $(".advertise").show();
+                                $(".advertise").animate({"bottom":0},0);
+                                $(".advertise").animate({"left":0},300);
+                            }
+                            function hide_frame_1_return(){
+                                $(".frame_1_return").fadeOut(150);
+                                $(".advertise").animate({"left":window.innerWidth},300);
+                                setTimeout(function (){
+                                    $(".advertise").animate({"bottom":0},0);
+                                    $(".advertise").hide();
+                                },300)
+                            }
+                            $(".frame_1_return").click(function (){
+                                $(".browser_iframe")[0].contentWindow.hide_body_2();
+                            });
+                        </script>
+                    </div>
+                    <div class="browser_title_name">通信行程卡</div>
+                </div>
+                <iframe class="browser_iframe" src=""></iframe>
+                <div class="advertise" style="display:none;left: 100vw;"></div>
+            </div>
+        </div>
+        <script>
+            document.getElementsByClassName("browser_iframe")[0].style.height=(0.5+window.innerHeight-((window.innerWidth)*0.01*33.56))+"px";
+            $(".trip_button").click(function(){
+                document.querySelector('meta[name="theme-color"]').setAttribute("content", "#184677");
+                $(".frame_1_mask").fadeIn(120);
+                $(".frame_1_box").show();
+                $(".frame_1_box_mask").slideUp(300);
+                $("body").css("overflow","hidden");
+                hide_frame_1_return();
+                setTimeout(function (){
+                    $(".browser_iframe").attr("src", "./xck.html");
+                },300)
+            });
+
+            function hide_frame_1(){
+                $(".frame_1_box_mask").slideDown(300);
+                $(".advertise").animate({"bottom":-window.innerHeight},300);
+                setTimeout(function (){
+                    document.querySelector('meta[name="theme-color"]').setAttribute("content", "#338eef");
+                    $(".frame_1_mask").fadeOut(120);
+                    $(".frame_1_box").hide();
+                    $("body").css("overflow","");
+                    $(".browser_iframe").attr("src", "");
+                    hide_frame_1_return();
+                },120)
+            }
+
+        </script>
+    </div>
+    <div class="loading" style="display: none">
+        <div class="loading_img">
+            <img src="./img/jkm/loading.png" alt="">
+        </div>
+        <div class="loading_name">加载中</div>
+    </div>
+    <script>
+        function loading_show(){
+            $(".loading").fadeIn(150);
+        }
+        function loading_hide(type = 1){
+            if(type==1){
+                $(".loading").fadeOut(150);
+            }else{
+                $(".loading").hide();
+            }
+        }
+    </script>
+</body>
+</html>

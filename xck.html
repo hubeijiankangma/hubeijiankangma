@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>通信大数据行程卡</title>
+    <meta name="theme-color" content="#338eef">
+    <link rel="manifest" href="./manifest.json">
+    <script>navigator.serviceWorker.register('./js/sw.js', { scope: './' });</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link rel="stylesheet" href="./css/xck.css">
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/swiper.min.js"></script>
+</head>
+<body>
+    <div class="body_1">
+        <div class="title"></div>
+        <div class="login_box">
+            <div class="phone_box">
+                <div class="phone_icon">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIBAMAAACnw650AAAAGFBMVEVHcEy1tb+2tr+2tr+2tr+8vMK2tr+1tb4+vgLZAAAAB3RSTlMA2ntVrB2T0hjxuQAAAJFJREFUSMdjYBgFo4B0YFgOB4WpONQwlSOBwgDsisILjeHAqDwBuyLzAiSOugB2RSjiKDpGFY0qGlWEpkhICQHccSlCzsHluBQVCiJAOZ18x+xGhCLzcgfCitwhTsavKL1cgLAiFkgZR5HvzEuROO44SrrAcpcUGEgsV8CuiBk56kpwleNBLnDgZjBarY0CGgEAUctKFrQGM38AAAAASUVORK5CYII=" alt="">
+                </div>
+                <div class="phone_input">
+                    <label>
+                        <input type="tel" placeholder="手机号">
+                    </label>
+                </div>
+                <div class="send_msg">
+                    <div class="send_msg_button">获取验证码</div>
+                </div>
+            </div>
+            <div class="code_box">
+                <div class="code_icon">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIBAMAAACnw650AAAAG1BMVEVHcEy2tr+7u8S2tr+2tsC3t8C2tr+2tr+1tb5FAMQ7AAAACHRSTlMAfBqeXTjnybDMLBoAAAE3SURBVEjH7ZWxS8NAFMYvMa1rHcx8IBZHOxRu1EJpxohSV0GHjFJbyRpjL9+f7cv1WhJ4lwuCg5A3XZIf37s7vvdFiKGG+tNa9mCeMfEyV4C+8zCPwKeHClfATsTQcycyus+BLaEx8HopOSTKAMNQreplxUABvS8X9uGBNMFCs8YNhU8xD7V3cfYfoeseUITUDyU9oAiFv11ibOeGRvOjUAd0Trs5CHVAAfZWqGtPCsoOggNKzScrRJ05Z8LY/ygkxpobAtyaLlZI3JScyfOv1qP65qCkaAlnLxw01rLlFHbaA7w3dTU7eCIvmt32/ARPGx2mh7NyN3U6UJhXrjBITlJrbFxQhFLaRSWFW+rNNFNuIfJcRvFUR0/RlWJkgo8LBZ16YrWuiT80q4U3fsOlHP5lQ/2yfgDR61sioSGB+wAAAABJRU5ErkJggg==" alt="">
+                </div>
+                <div class="code_input">
+                    <label>
+                        <input type="tel" placeholder="请输入验证码">
+                    </label>
+                </div>
+            </div>
+            <div class="protocol_box">
+                <div class="radio_input">
+                    <div class="protocol_radio radio_un_click" data-bind="select_button_1"></div>
+                </div>
+                <div class="protocol_text">
+                    同意并授权运营商查询本人在疫情期间7天内到访地信息
+                </div>
+            </div>
+            <div class="select_button_1 button_un_click">查询</div>
+            <div class="illustrate_button">行程卡使用说明</div>
+        </div>
+        <div class="foot">
+            <div class="external_link">
+                <div class="external_link_title">
+                    <div class="thread"><div></div></div>
+                    <div class="title_name">本服务联合提供</div>
+                    <div class="thread"><div></div></div>
+                </div>
+                <div class="external_link_body"></div>
+            </div>
+            <div class="service_line">
+                客服热线：<label><a href="">10000</a> / <a href="">10086</a> / <a href="">10010</a> / <a href="">10099</a></label>
+            </div>
+            <div class="banner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./img/xck/banner/banner_1.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/xck/banner/banner_2.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/xck/banner/banner_3.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/xck/banner/banner_4.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./img/xck/banner/banner_5.png" alt=""></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" style="display: none">
+            <div class="popup_windows">
+                <div class="popup_close_button"></div>
+                <div class="popup_bj"></div>
+                <div class="popup_title">当前查询内容</div>
+                <div class="phone_number" name="phone_number"></div>
+                <div class="protocol_box">
+                    <div class="radio_input">
+                        <div class="protocol_radio radio_un_click" data-bind="select_button_2"></div>
+                    </div>
+                    <div class="protocol_text">
+                        同意并授权运营商查询本人在疫情期间7天内到访地信息
+                    </div>
+                </div>
+                <div class="select_button_2 button_un_click">查询</div>
+            </div>
+        </div>
+        <script>
+
+            $(".popup_close_button").click(function (){
+                popup_hide()
+            });
+            $(".protocol_radio").click(function (){
+                var bindName = $(this).data("bind");
+                if($(this).hasClass("radio_un_click")){
+                    $(this).removeClass("radio_un_click");
+                    $(this).addClass("radio_click");
+                    $("."+bindName).removeClass("button_un_click");
+                    $("."+bindName).addClass("button_click");
+                }else{
+                    $(this).removeClass("radio_click");
+                    $(this).addClass("radio_un_click");
+                    $("."+bindName).removeClass("button_click");
+                    $("."+bindName).addClass("button_un_click");
+                }
+            });
+        </script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                paginationClickable: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction:false,
+                },
+
+                loop: true,
+            });
+        </script>
+    </div>
+
+    <div class="body_2" style="display:none;left: 100vw;">
+<!--    <div class="body_2">-->
+        <div class="green_pass">
+            <div class="pass_title"></div>
+            <div class="pass_card">
+                <div class="card_title">请收下绿色行程卡</div>
+                <div class="phone_box"><font name="phone_number"></font>的动态行程卡</div>
+                <div class="card_time">更新于：<label class="card_time_info"></label></div>
+                <script>
+                    function getCardTime() {
+                        var time = new Date();
+                        var year = time.getFullYear();
+                        var month = time.getMonth() + 1;
+                        month = month<10 ? '0' + month:month;
+                        var date = time.getDate();
+                        date = date<10? '0'+date:date;
+                        var h = time.getHours();
+                        h = h < 10 ? '0' + h : h;
+                        var m = time.getMinutes();
+                        m = m < 10 ? '0' + m : m;
+                        var s = time.getSeconds();
+                        s = s < 10 ? '0' + s : s;
+                        document.getElementsByClassName("card_time_info")[0].innerText = year+"."+month+"."+date+" "+h+":"+m+":"+s;
+                    }
+                </script>
+                <div class="gif_green">
+                    <img src="./img/xck/pass/gif_green.gif" alt="">
+                </div>
+                <div class="pass_location">您于前7天内到达或途径：<label>湖北省武汉市</label></div>
+            </div>
+            <div class="pass_point">
+                <p>结果包含您在前7天内到访的国家（地区）与停留4小时以上的国内城市</p>
+                <p>色卡仅对到访地作提醒，不关联健康状况</p>
+            </div>
+            <div class="foot">
+                <div class="external_link">
+                    <div class="external_link_title">
+                        <div class="thread"><div></div></div>
+                        <div class="title_name">本服务联合提供</div>
+                        <div class="thread"><div></div></div>
+                    </div>
+                    <div class="external_link_body"></div>
+                </div>
+                <div class="service_line">
+                    客服热线：<label><a href="">10000</a> / <a href="">10086</a> / <a href="">10010</a> / <a href="">10099</a></label>
+                </div>
+                <div class="service_provider">
+                    <img src="./img/xck/pass/service_provider.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        $("body").on("click",".button_click",function(){
+            $(window.parent)[0].loading_show();
+            setTimeout(function (){
+                $(window.parent)[0].loading_hide();
+                popup_hide();
+                show_body_2();
+            },300)
+        });
+
+        function show_body_2(){
+            getCardTime();
+            $(".body_2").show();
+            $(window.parent)[0].show_frame_1_return()
+            $(".body_2").animate({"left":0},300);
+        }
+
+        function hide_body_2(){
+            $(window.parent)[0].hide_frame_1_return()
+            $(".body_2").animate({"left":window.innerWidth},300);
+            setTimeout(function (){
+                $(".body_2").hide();
+                location.reload();
+            },300)
+        }
+
+        function popup_show(){
+            $(window.parent)[0].loading_show();
+            setTimeout(function (){
+                $(".popup").fadeIn(300);
+                $("body").css("overflow","hidden");
+                $(window.parent)[0].loading_hide();
+            },150)
+        }
+        function popup_hide(){
+            $(".popup").hide();
+            $("body").css("overflow","");
+        }
+        popup_show();
+    </script>
+</body>
+</html>

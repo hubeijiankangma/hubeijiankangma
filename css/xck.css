@@ -1,0 +1,490 @@
+*{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: #fefefe;
+    overflow-x: hidden;
+}
+.body_1, .body_2{
+    float: left;
+}
+.body_2{
+    position: absolute;
+    z-index: 3;
+}
+.title{
+    width: 100vw;
+    height: 15.73vw;
+    background-image: url("../img/xck/tittle.png");
+    background-size: 100vw 15.73vw;
+    margin-top: 9.58vw;
+}
+
+.login_box{
+    width: 85.28vw;
+    height: 78.28vw;
+    background: #fefefe;
+    border-radius:2.8vw 2.8vw 2.8vw 2.8vw;
+    -moz-border-radius:2.8vw 2.8vw 2.8vw 2.8vw;
+    margin: 5vw 0 0 7.36vw;
+    -webkit-box-shadow: #dfdfdf 0 0 4vw 0;
+    -moz-box-shadow: #dfdfdf 0 0 4vw 0;
+    box-shadow: #dfdfdf 0 0 4vw 0;
+    padding-top: 5.6vw;
+}
+.login_box .code_box,
+.login_box .phone_box{
+    width: 76.65vw;
+    height: 11.92vw;
+    margin: 0 0 0 4.2vw;
+    border-bottom: 0.23vw solid #dddddd;
+}
+.login_box .code_box{
+    margin-top: 6.54vw;
+    padding-bottom: 1.4vw;
+}
+
+.login_box .code_box .code_icon,
+.login_box .phone_box .phone_icon{
+    width: 9.5vw;
+    height: 11.92vw;
+    float: left;
+}
+
+.login_box .code_box .code_icon img,
+.login_box .phone_box .phone_icon img{
+    height: 6.3vw;
+    width: 6.3vw;
+    margin: 2.8vw 0 0 1.1vw;
+}
+.login_box .code_box .code_input,
+.login_box .phone_box .phone_input{
+    width: 45.95vw;
+    height: 11.92vw;
+    float: left;
+}
+.login_box .code_box .code_input input,
+.login_box .phone_box .phone_input input{
+    height: 6.3vw;
+    border:none;
+    margin-top: 2.8vw;
+    outline:none;
+    padding: 0;
+    font-size: 4.2vw;
+    font-weight: 400;
+    border-radius: 0;
+    caret-color: #15c555;
+}
+.login_box .phone_box .phone_input input{
+    width: 45.72vw;
+    border-right: 0.23vw solid #dddddd;
+}
+.login_box .code_box .code_input input::placeholder,
+.login_box .phone_box .phone_input input::placeholder {
+    color: #808080;
+}
+.login_box .phone_box .send_msg .send_msg_button{
+    width: 19.31vw;
+    height: 6.3vw;
+    font-size: 3.5vw;
+    color: #aaaaaa;
+    margin: 2.8vw 0 0 1.87vw;
+    text-align: center;
+    line-height: 6.3vw;
+}
+
+.login_box .phone_box .send_msg{
+    width: 21.2vw;
+    height: 11.92vw;
+    float: left;
+}
+
+
+.login_box .protocol_box{
+    width: 75.5vw;
+    height: 13.55vw;
+    margin: 3vw 0 0 4.9vw;
+}
+.login_box .protocol_box .radio_input{
+    width: 8.65vw;
+    height: 13.55vw;
+    float: left;
+}
+.login_box .protocol_box .radio_input .protocol_radio{
+    width: 5.6vw;
+    height: 5.6vw;
+    background-size: 5.6vw 5.6vw;
+    margin-top: 0.94vw;
+}
+
+
+.login_box .protocol_box .protocol_text,
+.popup .popup_windows .protocol_box .protocol_text{
+    width: 66.85vw;
+    height: 13.55vw;
+    float: left;
+    font-size: 4.7vw;
+    color: #999999;
+    line-height: 6.77vw;
+}
+
+.login_box .select_button_1,
+.popup .popup_windows .select_button_2{
+    width: 76.64vw;
+    height: 12.62vw;
+    border-radius:2.8vw 2.8vw 2.8vw 2.8vw;
+    -moz-border-radius:2.8vw 2.8vw 2.8vw 2.8vw;
+    margin: 4.44vw 0 0 4.2vw;
+    -webkit-box-shadow: #a3c4f8 0 0 2.5vw 0;
+    -moz-box-shadow: #a3c4f8 0 0 2.5vw 0;
+    box-shadow: #a3c4f8 0 0 2.5vw 0;
+    color: #fefefe;
+    text-align: center;
+    line-height: 12.62vw;
+    font-size: 4.7vw;
+    letter-spacing:1.9vw
+}
+.login_box .illustrate_button{
+    font-size: 3vw;
+    width: 76.64vw;
+    height: 5vw;
+    margin: 4vw 0 0 4.2vw;
+    color: #007aff;
+    text-align: right;
+    text-decoration:underline;
+}
+
+.foot{
+    width: 87.62vw;
+    margin: 3.9vw 0 0 6.23vw;
+}
+.foot .external_link .external_link_title{
+    width: 87.62vw;
+    height: 4.99vw;
+}
+.foot .external_link .external_link_title .thread{
+    width: 28.27vw;
+    height: 4.99vw;
+    float: left;
+}
+.foot .external_link .external_link_title .thread div{
+    width: 25.47vw;
+    height: 3.12vw;
+    border-bottom: 0.23vw solid #e4e4e4;
+    margin-left: 1.4vw;
+}
+.foot .external_link .external_link_title .title_name{
+    width: 31.08vw;
+    height: 4.99vw;
+    float: left;
+    text-align: center;
+    font-size: 3vw;
+    line-height: 4.99vw;
+    color: #999999;
+}
+
+.foot .external_link .external_link_body{
+    width: 87.62vw;
+    height: 5.45vw;
+    background-image: url("../img/xck/external_link_body.png");
+    background-size: 87.62vw 5.45vw;
+    margin-top: 2.96vw;
+}
+
+.foot .service_line{
+    width: 87.62vw;
+    height: 10.2vw;
+    font-size: 3vw;
+    text-align: center;
+    line-height: 10.2vw;
+    color: #999999;
+}
+.foot .service_line label{
+    color: #007aff;
+}
+.foot .service_line label a{
+    text-decoration: none;
+    color: #007aff;
+}
+.foot .banner{
+    width: 85.28vw;
+    height: 13.78vw;
+    border-radius:1.4vw 1.4vw 1.4vw 1.4vw;
+    -moz-border-radius:1.4vw 1.4vw 1.4vw 1.4vw;
+    margin: 1.4vw 0 16vw 1.17vw;
+    -webkit-box-shadow: #e5e5e5 0 0 1vw 0;
+    -moz-box-shadow: #e5e5e5 0 0 1vw 0;
+    box-shadow: #e5e5e5 0 0 1vw 0;
+}
+.foot .banner .swiper-container{
+    width: 85.28vw;
+    height: 13.78vw;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.foot .banner .swiper-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    -ms-transition-property: -ms-transform;
+    transition-property: transform;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.foot .banner .swiper-wrapper .swiper-slide img{
+    width: 85.28vw;
+    height: 13.78vw;
+    border-radius:1.4vw 1.4vw 1.4vw 1.4vw;
+    -moz-border-radius:1.4vw 1.4vw 1.4vw 1.4vw;
+    border: 0;
+}
+.foot .banner .swiper-slide {
+    -webkit-flex-shrink: 0;
+    -ms-flex: 0 0 auto;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.foot .banner .swiper-pagination {
+    position: absolute;
+    text-align: right;
+    z-index: 2;
+    bottom: 0;
+    right: 2.42vw;
+    width: 30vw;
+}
+.foot .banner .swiper-pagination-bullet {
+    width: 0.62vw;
+    height: 0.7vw;
+    display: inline-block;
+    border-radius: 0.3vw;
+    margin: 0 0.3vw;
+    background: #e6e6e6;
+    cursor: pointer;
+}
+.foot .banner .swiper-pagination-bullet-active{
+    width: 1.47vw;
+    background: #3478f6;
+}
+
+.popup{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6);
+}
+.popup .popup_windows{
+    position: fixed;
+    width: 86vw;
+    height: 130vw;
+    background: #fefefe;
+    border-radius:3.2vw 3.2vw 3.2vw 3.2vw;
+    -moz-border-radius:3.2vw 3.2vw 3.2vw 3.2vw;
+    margin: 12.3vw 0 0 7vw;
+}
+.popup .popup_windows .popup_close_button{
+    width: 4.2vw;
+    height: 4.2vw;
+    background-image: url("../img/xck/close.png");
+    background-size: 4.2vw 4.2vw;
+    margin: 3.2vw 0 0 78.74vw;
+}
+.popup .popup_windows .popup_bj{
+    width: 86vw;
+    height: 65.58vw;
+    background-image: url("../img/xck/bj.png");
+    background-size: 86vw 65.58vw;
+}
+.popup .popup_windows .popup_title{
+    width: 86vw;
+    text-align: center;
+    font-size: 3vw;
+    color: #999999;
+}
+
+.popup .popup_windows .phone_number{
+    width: 86vw;
+    height: 11vw;
+    line-height: 11vw;
+    text-align: center;
+    font-size: 5.2vw;
+    color: #464646;
+    font-weight: 600;
+}
+.popup .popup_windows .protocol_box{
+    width: 86vw;
+    height: 13.55vw;
+    margin-top: 1vw;
+}
+
+.popup .popup_windows .protocol_box .radio_input{
+    width: 14vw;
+    height: 13.55vw;
+    float: left;
+}
+.popup .popup_windows .protocol_box .radio_input .protocol_radio{
+    width: 6.69vw;
+    height: 6.69vw;
+    background-size: 6.69vw  6.69vw;
+    margin: 1vw 0 0 4.75vw;
+}
+.popup .popup_windows .select_button_2{
+    width: 77.4vw;
+    margin: 4.44vw 0 0 4.3vw;
+}
+
+.radio_un_click{
+    background-image: url("../img/xck/radio_unclick.png");
+}
+.radio_click{
+    background-image: url("../img/xck/radio_click.png");
+}
+.button_un_click{
+    background: #66afff;
+}
+.button_click{
+    background: #0079ff;
+}
+
+.green_pass{
+    width: 100vw;
+    background: #2aa567;
+    top: 0;
+    padding-top: 8.57vw;
+}
+
+.green_pass .pass_title{
+    width: 100vw;
+    height: 16.12vw;
+    background-image: url("../img/xck/pass/pass_tittle.png");
+    background-size: 100vw 16.12vw;
+}
+
+.green_pass .pass_card{
+    width: 85.28vw;
+    min-height: 98.36vw;
+    background: #ffffff;
+    border-radius:2.95vw 2.95vw 2.95vw 2.95vw;
+    -moz-border-radius:2.95vw 2.95vw 2.95vw 2.95vw;
+    margin: 5.14vw 0 0 7.4vw;
+}
+.green_pass .pass_card .card_title{
+    width: 85.28vw;
+    height: 8.4vw;
+    background-image: url("../img/xck/pass/pass_card_title.png");
+    background-size: 85.28vw 8.4vw;
+    border-radius:2.95vw 2.95vw 0 0;
+    -moz-border-radius:2.95vw 2.95vw 0 0;
+    text-align: center;
+    line-height: 8.4vw;
+    color: #2aa567;
+    font-size: 3.65vw;
+    font-weight: 600;
+}
+.green_pass .pass_card .phone_box{
+    width: 85.28vw;
+    height: 13.32vw;
+    text-align: center;
+    line-height:  13.32vw;
+    font-size: 4.2vw;
+    font-weight: 600;
+    color: #363636;
+}
+.green_pass .pass_card .card_time{
+    width: 85.28vw;
+    height: 6.23vw;
+    text-align: center;
+    line-height: 6.23vw;
+    font-size: 4.8vw;
+    color: #999999;
+    font-weight: 600;
+}
+
+.green_pass .pass_card .gif_green{
+    width: 76.64vw;
+    height: 53.58vw;
+    border-bottom: 0.23vw solid #dddddd;
+    margin-left: 4.2vw;
+}
+.green_pass .pass_card .gif_green img{
+    width: 41.9vw;
+    height: 41.9vw;
+    margin: 4.28vw 0 0 17.45vw;
+}
+
+.green_pass .pass_card .pass_location{
+    width: 76.64vw;
+    font-size: 4.5vw;
+    color: #999999;
+    font-weight: 500;
+    margin: 2.5vw 0 0 4.2vw;
+    line-height: 5.5vw;
+    padding-bottom: 3.35vw;
+}
+.green_pass .pass_card .pass_location label{
+    color: #363636;
+}
+.green_pass .pass_point{
+    width: 100vw;
+    font-size: 2.5vw;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 1.79vw;
+}
+.green_pass .pass_point p{
+    margin: 0 0 1.5vw 0;
+}
+
+.green_pass .foot{
+    margin-top: 2.34vw;
+}
+.green_pass .foot .external_link .external_link_title .thread{
+    width: 28.74vw;
+}
+.green_pass .foot .external_link .external_link_title .thread div{
+    border-bottom: 0.23vw solid #ffffff;
+    height: 3.35vw;
+    margin-left: 1.64vw;
+}
+.green_pass .foot .external_link .external_link_title .title_name{
+    width: 30.14vw;
+    color: #ffffff;
+}
+.green_pass .foot .external_link .external_link_body{
+    background-image: url("../img/xck/pass/external_link_body.png");
+}
+.green_pass .foot .service_line{
+    height: 11.37vw;
+    line-height: 11.37vw;
+    color: #ffffff;
+}
+.green_pass .foot .service_line label,
+.green_pass .foot .service_line label a{
+    color: #ffffff;
+}
+
+.green_pass .foot .service_provider{
+    width: 87.62vw;
+    height: 11.8vw;
+    text-align: center;
+}
+.green_pass .foot .service_provider img{
+    width: 41.9vw;
+    height: 9.74vw;
+}
